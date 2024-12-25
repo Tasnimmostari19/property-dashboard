@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Form, Input, Button, message } from 'antd';
-import { HomeOutlined, DownOutlined } from '@ant-design/icons';
-import { Input as AntInput, Dropdown as AntDropdown, Menu as AntMenu } from 'antd'; 
+import { DownOutlined } from '@ant-design/icons';
+import { Dropdown as AntDropdown, Menu as AntMenu } from 'antd'; 
 import Layout from '../Component/Layout';
 
 
@@ -69,7 +69,7 @@ export default function AddProperty() {
             }
           >
             <button className="ant-input" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              {property.type || 'Select Type'} <DownOutlined />
+              {property.type || 'Select Type'}{' '} <DownOutlined style={{ marginLeft:'5px'}}/>
             </button>
           </AntDropdown>
         </Form.Item>
@@ -84,7 +84,7 @@ export default function AddProperty() {
             }
           >
             <button className="ant-input" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              {property.status || 'Select Status'} <DownOutlined />
+              {property.status  || 'Select Status '}  <DownOutlined style={{ marginLeft:'5px'}}/>
             </button>
           </AntDropdown>
         </Form.Item>
@@ -98,7 +98,7 @@ export default function AddProperty() {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" className="bg-indigo-500 hover:bg-blue-700">
+          <Button type="primary" htmlType="submit" className="bg-indigo-500 hover:bg-blue-700 mt-5">
             Add Property
           </Button>
         </Form.Item>
